@@ -11,6 +11,7 @@ public class StreamsApi {
     public static void main(String[] args) {
 
         List<Integer> numbers = Arrays.asList( 5,3,4,1,10,4,1);
+        List<Integer> list2 = Arrays.asList(11,2,3,210,300,1,10);
         System.out.println("Before filtering");
 
         List<Integer> list = numbers.stream()
@@ -25,6 +26,10 @@ public class StreamsApi {
                 }).sorted().toList();
 
         System.out.println("After filtering"+list);
+
+        List<Integer>resultList=list2.stream().filter(n -> n > 2).sorted().toList();
+        System.out.println("After filtering"+ resultList);
+
 
     }
 
