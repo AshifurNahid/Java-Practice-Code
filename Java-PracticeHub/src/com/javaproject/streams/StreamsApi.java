@@ -30,6 +30,7 @@ public class StreamsApi {
         List<Integer>resultList=list2.stream().filter(n -> n > 2).sorted().toList();
         System.out.println("After filtering"+ resultList);
 
+
     }
 
 
