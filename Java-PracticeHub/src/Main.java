@@ -22,7 +22,7 @@ public class Main {
 
 
         service.getHighestPaidEmployee(employees).ifPresent(emp ->
-                System.out.println("Highest Paid Employee: " + emp));
+                System.out.println("Highest Paid Employee: " + emp.getName()));
 
 
         System.out.println("Employees Grouped by Department: " + service.groupByDepartment(employees));

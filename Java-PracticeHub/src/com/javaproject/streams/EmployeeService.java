@@ -6,10 +6,11 @@ import java.util.stream.Collectors;
 
 public class EmployeeService {
 
-    public List<Employee> getActiveEmployees(List<Employee> employees) {
+    public List<String> getActiveEmployees(List<Employee> employees) {
         return employees.stream()
                 .filter(Employee::isActive)
-                .collect(Collectors.toList());
+                .map(Employee::getName)
+                .collect(Collectors.toList()).reversed();
     }
 
 
@@ -20,7 +21,6 @@ public class EmployeeService {
                 .average()
                 .orElse(0.0);
     }
-
 
     public Optional<Employee> getHighestPaidEmployee(List<Employee> employees) {
         return employees.stream()
