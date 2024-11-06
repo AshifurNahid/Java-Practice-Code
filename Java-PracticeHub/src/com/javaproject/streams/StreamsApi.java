@@ -26,8 +26,6 @@ public class StreamsApi {
 
         System.out.println("After filtering"+list);
 
-
-
     }
 
 
